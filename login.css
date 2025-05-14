@@ -1,0 +1,57 @@
+ #login-section, #register-section, #cart-section {
+      display: none;
+      font-family: Arial, sans-serif;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: white;
+    }
+
+    .login-container {
+      width: 300px;
+      padding: 20px;
+      background: white;
+      margin-left: 600px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      margin-top: 100px;
+    }
+
+    .login-container label,
+    .register-link {
+      display: block;
+      margin-top: 15px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .register-link a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background: #111111;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .login-btn:hover {
+      background: #1c1b1b;
+    }
+    

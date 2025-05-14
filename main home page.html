@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ecommerce</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="products.css">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="emptycart.css">
+  <link rel="stylesheet" href="contactus.css">
+  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="responsive.css">
+  </head>
+<body>
+<!-- Header -->
+<header class="navbar">
+  <div class="logo">Ecommerce</div>
+  <nav class="nav-links">
+    <a id="home-tab">Home</a>
+    <a id="products-tab">Products</a>
+    <a id="about-tab">About</a>
+    <a id="contact-tab">Contact</a>
+  </nav>
+  <div class="buttons">
+    <button class="btn" id="login-btn"><i class="bi bi-box-arrow-in-right"></i> Login</button>
+    <button class="btn" id="register-btn"><i class="bi bi-person-fill-add"></i> Register</button>
+    <button class="btn" id="cart-btn"><i class="bi bi-cart-fill"></i> Cart (0)</button>
+  </div>
+</header>
+<!-- Sections -->
+<section class="hero" id="home-section">
+  <div class="hero-content">
+    <h1>New Season Arrivals</h1>
+    <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  </div>
+</section>
+<section class="products-section" id="products-section">
+  <h2 class="products-title">Latest Products</h2>
+  <hr>
+  <div class="category-nav">
+    <button class="cat-btn active" data-category="all">All</button>
+    <button class="cat-btn" data-category="men's clothing">Men Clothing</button>
+    <button class="cat-btn" data-category="women's clothing">Women Clothing</button>
+    <button class="cat-btn" data-category="jewelery">Jewelery</button>
+    <button class="cat-btn" data-category="electronics">Electronics</button>
+  </div>
+  <div id="products-container" class="product-grid"></div>
+</section>
+<section class="about-section" id="about-section">
+  <h2>About Us</h2>
+  <hr>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam laudantium quidem vitae ullam impedit molestias, aliquid eveniet aspernatur debitis maiores asperiores vel natus odio quod distinctio commodi! Illo, reiciendis voluptatum.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ut harum, doloremque dolorum necessitatibus inventore laborum ex numquam nihil et sunt. Magni quo tempore rerum dignissimos hic, officiis molestiae sunt.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim temporibus accusantium ullam ab quibusdam dolor expedita voluptatum atque, nostrum sint suscipit laboriosam sed iste dolorem saepe nobis eos consequatur labore.</p>
+  <div class="about-products-section">
+    <div class="about-products-section">
+    <h3>Our Products</h3>
+    <div class="product-list">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/images/pexels-photo-298863.jpeg" alt="Men's Clothing">
+        </div>
+        <strong>Men's Clothing</strong>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/images/pexels-photo-7679720.jpeg" alt="Women's Clothing">
+        </div>
+        <strong>Women's Clothing</strong>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/images/pexels-photo-1927259.webp" alt="Jewelry">
+        </div>
+        <strong>Jewelery</strong>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/images/pexels-photo-356056.jpeg" alt="Electronics">
+        </div>
+        <strong>Electronics</strong>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact-section" id="contact-section">
+  <h1>Contact Us</h1>
+  <hr>
+  <form id="contact-form">
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Enter your name" />
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="name@example.com" />
+    <label for="message">Message</label>
+    <textarea id="message" placeholder="Enter your message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <div id="sent-message" class="sent-message" style="display: none;">Sent</div>
+</section>
+<section id="login-section">
+  <div class="login-container">
+    <label for="login-email">Email</label>
+    <input type="email" id="login-email" placeholder="name@example.com" />
+    <label for="login-password">Password</label>
+    <input type="password" id="login-password" placeholder="Password" />
+    <div class="register-link">New Here? <a href="#">Register</a></div><br>
+    <button class="login-btn">Login</button>
+  </div>
+</section>
+<section id="register-section">
+  <div class="login-container">
+    <label for="register-name">Name</label>
+    <input type="text" id="register-name" placeholder="Your Name" />
+    <label for="register-email">Email</label>
+    <input type="email" id="register-email" placeholder="name@example.com" />
+    <label for="register-password">Password</label>
+    <input type="password" id="register-password" placeholder="Password" />
+    <div class="register-link">Already have an account? <a href="#" id="back-to-login">Login</a></div><br>
+    <button class="login-btn">Register</button>
+  </div>
+</section>
+<!-- PRODUCTS SECTION -->
+<section id="latest-products" style="display: block;">
+<!-- CART SECTION -->
+<section id="cart-section" style="display: none;">
+  <main class="cart-container">
+    <h2 class="cart-header">Cart</h2>
+    <hr>
+    <div class="empty-cart-container" id="empty-cart">
+      <h3>Your Cart is Empty</h3>
+      <button id="continue-shopping">← Continue Shopping</button>
+    </div>
+    <div class="cart-body" id="cart-body">
+      <div class="item-list" id="item-list"></div>
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+        <div class="summary-line"><span>Products (<span id="total-items">0</span>)</span><span id="subtotal">$0</span></div>
+        <div class="summary-line"><span>Shipping</span><span>$30</span></div>
+        <div class="summary-line"><strong>Total amount</strong><strong id="total">$0</strong></div>
+        <button class="checkout-btn">Go to checkout</button>
+      </div>
+    </div>
+  </main>
+</section>
+<footer>
+  <p>Made with <span style="color: red;">❤️</span> by <a href="#">AchieversIT</a></p>
+</footer>
+<script type="module" src="main.js"></script>
+<script  type="module" src="navigation.js"></script>
+<script type="module" src="products.js"></script>
+<script type="module" src="auth.js"></script>
+<script type="module" src="cart.js"></script>
+<script type="module" src="contact.js"></script>
+</body>
+</html>
+
